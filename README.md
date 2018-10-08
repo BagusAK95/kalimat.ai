@@ -47,7 +47,7 @@ Route.delete('/:model(user|conversation)/:id', 'InjectorController.remove')
 ```
 ### Question
 + What is the benefit of this change?
-	- User and Conversation do not need to create Controller, only represented by InjectorController. Code to be simple.
+	- User and Conversation do not need to create Controller, only represented by InjectorController. Make Code to be simple.
 
 # Unit Test
 ```
@@ -79,3 +79,5 @@ API.
   passed      : 10
   time        : 962ms
 ```
+
+**NB**: If there are unanswered questions, it means that AdonisJS does not implement the code in the task.
