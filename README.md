@@ -1,7 +1,5 @@
 # Initial Prototype
-## Task
-
-### REST API
+## REST API
 ```
 GET /user/?page={page}&limit={limit}
 GET /user/{id}
