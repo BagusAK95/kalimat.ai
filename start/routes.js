@@ -116,7 +116,7 @@ Route.get('/', ({ view }) => {
  *         type: string
  *       - name: gender
  *         in: formData
- *         description: Gender
+ *         description: Gender (male | female)
  *         required: true
  *         type: string
  *       - name: city
@@ -160,7 +160,7 @@ Route.get('/', ({ view }) => {
  *         type: string
  *       - name: gender
  *         in: formData
- *         description: Gender
+ *         description: Gender (male | female)
  *         required: true
  *         type: string
  *       - name: city
