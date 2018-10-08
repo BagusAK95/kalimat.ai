@@ -48,3 +48,33 @@ Route.delete('/:model(user|conversation)/:id', 'InjectorController.remove')
 ### Question
 + What is the benefit of this change?
 	- User and Conversation do not need to create Controller, only represented by InjectorController. Code to be simple.
+
+# Unit Test
+```
+adonis test
+```
+
+```
+info: serving app on http://127.0.0.1:4000
+
+  Conversation
+API.
+    ✓ Create Conversation (865ms)
+    ✓ Update Conversation (20ms)
+    ✓ Get List Conversation By Pagination (16ms)
+    ✓ Get Conversation By ID (8ms)
+    ✓ Remove Conversation (9ms)
+
+  User
+    ✓ Create User (7ms)
+    ✓ Update User (9ms)
+    ✓ Get List User By Pagination (6ms)
+    ✓ Get User By ID (9ms)
+    ✓ Remove User (5ms)
+
+   PASSED
+
+  total       : 10
+  passed      : 10
+  time        : 962ms
+```
