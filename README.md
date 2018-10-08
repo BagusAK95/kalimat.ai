@@ -1,5 +1,7 @@
 # Initial Prototype
-### Task
+## Task
+
+# REST API
 ```
 GET /user/?page={page}&limit={limit}
 GET /user/{id}
@@ -13,16 +15,16 @@ POST /conversation
 PUT /conversation/{id}
 DELETE /converation/{id}
 ```
-### Question
+## Question
 + Why the type of store is Store and not Memstore ?
     - This Answer
 + What design patterns do you recognize here?
     - This Answer
 
 # Injectable Components
-### Task
-### Question
+## Task
+## Question
 
 # Generic Repo
-### Task
-### Question
+## Task
+## Question
