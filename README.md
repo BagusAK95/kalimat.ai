@@ -1,5 +1,6 @@
+
 # Initial Prototype
-## REST API
+### REST API
 ```
 GET /user/?page={page}&limit={limit}
 GET /user/{id}
@@ -13,16 +14,37 @@ POST /conversation
 PUT /conversation/{id}
 DELETE /converation/{id}
 ```
-## Question
-+ Why the type of store is Store and not Memstore ?
-    - This Answer
+### Question
 + What design patterns do you recognize here?
-    - This Answer
+    - Dependency Injection
 
 # Injectable Components
-## Task
-## Question
+### Injection
+```
+const  Store  =  use('App/Store/Memory')
+
+class  InjectorController {
+	async  get({ params }) {
+		return  Store.get(params.model, params.id)
+	}  
+
+	async  list({ params, request }) {
+		return  Store.list(params.model, request.get().page, request.get().limit)
+	}
+```
+### Question
++ If you created a `DBStore` with path `components/store/db_store` what do you need to do to swap the implementation.
+	- In InjectorController.js just swap `const  Store  =  use('App/Store/Memory')` to `const  Store  =  use('App/Store/Database')`
 
 # Generic Repo
-## Task
-## Question
+### Dynamic Routes
+```
+Route.get('/:model(user|conversation)/:id', 'InjectorController.get')
+Route.get('/:model(user|conversation)', 'InjectorController.list')
+Route.post('/:model(user|conversation)', 'InjectorController.create')
+Route.put('/:model(user|conversation)/:id', 'InjectorController.update')
+Route.delete('/:model(user|conversation)/:id', 'InjectorController.remove')
+```
+### Question
++ What is the benefit of this change?
+	- User and Conversation do not need to create Controller, only represented by InjectorController. Code to be simple.
