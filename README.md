@@ -1,31 +1,28 @@
-# Adonis fullstack application
-
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
-
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
-
-## Setup
-
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick
+# Initial Prototype
+### Task
 ```
+GET /user/?page={page}&limit={limit}
+GET /user/{id}
+POST /user
+PUT /user/{id}
+DELETE /user/{id}
 
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
+GET /conversation?page={page}&limit={limit}
+GET /conversation/{id}
+POST /conversation
+PUT /conversation/{id}
+DELETE /converation/{id}
 ```
+### Question
++ Why the type of store is Store and not Memstore ?
+    - This Answer
++ What design patterns do you recognize here?
+    - This Answer
+
+# Injectable Components
+### Task
+### Question
+
+# Generic Repo
+### Task
+### Question
